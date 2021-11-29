@@ -1,0 +1,37 @@
+.coffee {
+    background: url('../../assets/images/img/coffee-bg.png') no-repeat 50%/cover;
+    &__title {
+        padding-top: 80px;
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 71px;
+        padding-top: 40px;
+        padding-bottom: 110px;
+    }
+    &__block {
+        width: 220px;
+        height: 240px;
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+    }
+    &__name {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 15px;
+        font-weight: 400;
+    }
+    &__price {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+}

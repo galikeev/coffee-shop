@@ -1,6 +1,5 @@
 .navigation {
     font-size: 12px;
-    color: #fff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     &__menu {
         list-style-type: none;
@@ -10,6 +9,9 @@
     }
     &__links {
         margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
         a {
             text-decoration: none;
             display: flex;

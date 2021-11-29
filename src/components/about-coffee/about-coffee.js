@@ -1,17 +1,12 @@
-import './app-about.scss';
-import {AboutIcon} from '../../assets/images';
+import AppCoffeeLogo from '../app-coffee-logo/app-coffee-logo';
 
-const AppAbout = () => {
+import './about-coffee.scss';
+
+const AboutCoffee = () => {
     return (
         <div className="about">
             <h2 className="about__title">About Us</h2>
-            <div className="about__block">
-                <span></span>
-                <div className="about__icon">
-                    <img src={AboutIcon} alt="icon" />
-                </div>
-                <span></span>
-            </div>
+            <AppCoffeeLogo/>
             <p className="about__descr">
                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                 Afraid at highly months do things on at. Situation recommend objection do intention
@@ -29,4 +24,4 @@ const AppAbout = () => {
     );
 };
 
-export default AppAbout;
+export default AboutCoffee;
