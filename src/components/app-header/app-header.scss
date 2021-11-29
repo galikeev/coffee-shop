@@ -1,6 +1,6 @@
 .header {
     background: url('../../assets/images/img/main-bg.png') no-repeat 50%/cover;
-    min-height: 640px;
+    min-height: 100vh;
     &__wrapper {
         padding-top: 30px;
         padding-left: 148px;
@@ -17,7 +17,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 35px;
+        margin-top: 20px;
         margin-bottom: 35px;
         span {
             width: 60px;
