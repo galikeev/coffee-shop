@@ -1,0 +1,24 @@
+.filter {
+    display: flex;
+    &__title {
+        margin-right: 35px;
+    }
+    &__btn {
+        width: 75px;
+        height: 30px;
+        margin-right: 5px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border: none;
+        cursor: pointer;
+        &:nth-child(2) {
+            border-radius: 4px 0px 0px 4px;
+        }
+        &:nth-child(4) {
+            border-radius: 0px 4px 4px 0px;
+        }
+        &_gr {
+            background: #a5a5a5;
+        }
+    }
+}
