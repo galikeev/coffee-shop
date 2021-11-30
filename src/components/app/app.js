@@ -5,7 +5,7 @@
 
 import SecondHeader from '../second-header/second-header';
 import AppAboutProduct from '../app-about-product/app-about-product';
-import AppFilter from '../app-filter/app-filter';
+import SearchFilter from '../search-filter/search-filter';
 
 import './app.scss';
 
@@ -19,7 +19,7 @@ const App = () => {
             <AppFooter/> */}
             <SecondHeader second/>
             <AppAboutProduct bearns/>
-            <AppFilter/>
+            <SearchFilter/>
         </div>
     )
 

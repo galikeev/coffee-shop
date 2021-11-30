@@ -1,7 +1,10 @@
 .filter {
     display: flex;
+    align-items: center;
     &__title {
         margin-right: 35px;
+        font-size: 14px;
+        line-height: 20px;
     }
     &__btn {
         width: 75px;
