@@ -1,5 +1,5 @@
 import { PromoIcon } from '../../assets/images';
-import './app-promo.scss';
+import './promo-block.scss';
 
 const AppPromo = () => {
     return (

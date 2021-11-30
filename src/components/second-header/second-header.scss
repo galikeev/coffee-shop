@@ -1,0 +1,11 @@
+.second-header {
+    background: url('../../assets/images/img/second-bg.png') no-repeat 50%/cover;
+    &__title {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 58px;
+        color: #FFFFFF;
+        text-align: center;
+        padding-bottom: 84px;
+    }
+}
