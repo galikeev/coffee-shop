@@ -15,7 +15,7 @@ const AppNavigation = (props) => {
                 <li className="navigation__links">
                     <a style={colorLink} href="3">
                         <img src={colorLogo} alt="logo" />
-                        <div>Coffee house</div>
+                        Coffee house
                     </a>
                 </li>
                 <li className="navigation__links">

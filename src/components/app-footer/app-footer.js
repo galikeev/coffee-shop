@@ -6,7 +6,7 @@ import './app-footer.scss';
 const AppFooter = () => {
     return (
         <footer className="footer">
-            <AppNavigation footer="black"/>
+            <AppNavigation footer/>
             <AppCoffeeLogo/>
         </footer>
         
