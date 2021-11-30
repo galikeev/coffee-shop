@@ -5,5 +5,7 @@ import CoffeeIcon from './icons/coffee-icon.svg';
 import SolimoCoffee from './img/solimo-coffee.jpg';
 import PrestoCoffee from './img/presto-coffee.jpg';
 import AromisticoCoffee from './img/aromistico-coffee.jpg';
+import CupCoffeePhoto from './img/coffee-photo.jpg';
+import GirlCoffeePhoto from './img/girl-photo.jpg';
 
-export {LogoWhite, LogoBlack, PromoIcon, CoffeeIcon, SolimoCoffee, PrestoCoffee, AromisticoCoffee};
+export {LogoWhite, LogoBlack, PromoIcon, CoffeeIcon, SolimoCoffee, PrestoCoffee, AromisticoCoffee, CupCoffeePhoto, GirlCoffeePhoto};

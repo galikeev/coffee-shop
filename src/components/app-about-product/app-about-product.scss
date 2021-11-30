@@ -1,0 +1,24 @@
+.product {
+    &__wrapper {
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+        gap: 89px;
+    }
+    &__title {
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+    }
+    &__descr {
+        max-width: 346px;
+        max-height: 232px;
+        text-align: center;
+    }
+    &__line {
+        display: block;
+        margin: 60px auto 60px auto;
+        width: 240px;
+        border: 1px solid #000000;
+    }
+}

@@ -4,6 +4,7 @@
 // import AppFooter from '../app-footer/app-footer';
 
 import SecondHeader from '../second-header/second-header';
+import AppAboutProduct from '../app-about-product/app-about-product';
 
 import './app.scss';
 
@@ -15,7 +16,8 @@ const App = () => {
             <AboutCoffee/>
             <BestCoffeeList/>
             <AppFooter/> */}
-            <SecondHeader/>
+            <SecondHeader second/>
+            <AppAboutProduct bearns/>
         </div>
     )
 
