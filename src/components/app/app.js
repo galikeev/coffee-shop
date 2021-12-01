@@ -26,7 +26,7 @@ class App extends Component {
                 {img: AromisticoCoffee, name: 'SOLIMO Coffee 2 kg', country: 'Brazil', price: 3.99, alt: 'SOLIMO Coffee', id: 6},
             ],
             term: '',
-            filter: ''
+            filter: 'all'
         }
     }
 

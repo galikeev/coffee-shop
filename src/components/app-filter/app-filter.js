@@ -2,6 +2,7 @@ import './app-filter.scss';
 
 const AppFilter = (props) => {
     const buttonsData = [
+        {name: 'all', label: 'All'},
         {name: 'brazil', label: 'Brazil'},
         {name: 'kenya', label: 'Kenya'},
         {name: 'columbia', label: 'Columbia'}
