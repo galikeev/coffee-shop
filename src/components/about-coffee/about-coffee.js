@@ -4,7 +4,7 @@ import './about-coffee.scss';
 
 const AboutCoffee = () => {
     return (
-        <div className="about">
+        <section className="about">
             <h2 className="about__title">About Us</h2>
             <AppCoffeeLogo/>
             <p className="about__descr">
@@ -20,7 +20,7 @@ const AboutCoffee = () => {
                 recommend. Did even but nor are most gave hope. Secure active living depend son
                 repair day ladies now.
             </p>
-        </div>
+        </section>
     );
 };
 

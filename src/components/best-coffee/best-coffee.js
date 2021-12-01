@@ -13,21 +13,21 @@ const BestCoffeeList = () => {
 
     const coffee = coffeeData.map(({img, name, price, alt}) => {
         return (
-            <div className="coffee__block">
+            <div className="best__block">
                 <img src={img} alt={alt} />
-                <h3 className="coffee__name">{name}</h3>
-                <div className="coffee__price">{price}$</div>
+                <h3 className="best__name">{name}</h3>
+                <div className="best__price">{price}$</div>
             </div>
         );
     });
 
     return (
-        <div className="coffee">
-            <h2 className="coffee__title">Our best</h2>
-            <div className="coffee__wrapper">
+        <section className="best">
+            <h2 className="best__title">Our best</h2>
+            <div className="best__wrapper">
                 {coffee}
             </div>
-        </div>
+        </section>
     );
 }
 

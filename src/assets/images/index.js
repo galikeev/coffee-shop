@@ -7,5 +7,17 @@ import PrestoCoffee from './img/presto-coffee.jpg';
 import AromisticoCoffee from './img/aromistico-coffee.jpg';
 import CupCoffeePhoto from './img/coffee-photo.jpg';
 import GirlCoffeePhoto from './img/girl-photo.jpg';
+import BigCoffeeImg from './img/big-coffee-img.jpg';
 
-export {LogoWhite, LogoBlack, PromoIcon, CoffeeIcon, SolimoCoffee, PrestoCoffee, AromisticoCoffee, CupCoffeePhoto, GirlCoffeePhoto};
+export {
+    LogoWhite, 
+    LogoBlack, 
+    PromoIcon, 
+    CoffeeIcon, 
+    SolimoCoffee, 
+    PrestoCoffee, 
+    AromisticoCoffee, 
+    CupCoffeePhoto, 
+    GirlCoffeePhoto,
+    BigCoffeeImg
+};
