@@ -73,7 +73,10 @@ class App extends Component {
                 <AppFooter/> */}
                 <SecondHeader second/>
                 <AppAboutProduct bearns/>
-                <SearchFilter/>
+                <SearchFilter
+                    onUpdateSearch={this.onUpdateSearch}
+                    filter={filter}
+                    onFilterSelect={this.onFilterSelect}/>
                 <CoffeeGoods
                     data={visibleData}/>
                 <AppFooter/>

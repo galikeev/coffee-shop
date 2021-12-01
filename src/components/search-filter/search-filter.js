@@ -3,11 +3,13 @@ import AppFilter from '../app-filter/app-filter';
 
 import './search-filter.scss';
 
-const SearchFilter = () => {
+const SearchFilter = ({onUpdateSearch, filter, onFilterSelect}) => {
     return (
         <div className="search-filter">
-            <SearchPanel/>
-            <AppFilter/>
+            <SearchPanel onUpdateSearch={onUpdateSearch}/>
+            <AppFilter
+                filter={filter}
+                onFilterSelect={onFilterSelect}/>
         </div>
     );
 };
