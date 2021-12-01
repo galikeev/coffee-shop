@@ -1,0 +1,11 @@
+.goods {
+    display: grid;
+    grid-template-columns: repeat(3,220px);
+    grid-template-rows: repeat(2,minmax(260px,auto));
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 69px;
+    column-gap: 60px;
+    margin-bottom: 30px;
+}
