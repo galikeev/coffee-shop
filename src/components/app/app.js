@@ -73,9 +73,9 @@ const App = () => {
     return (
         <div className="app">
             <MainPage/>
-            <SecondPage dataCoffee={dataCoffee}/>
+            {/* <SecondPage dataCoffee={dataCoffee}/>
             <CoffeePage dataCoffee={dataCoffee}/>
-            <ThirdPage dataCoffee={dataCoffee}/>
+            <ThirdPage dataCoffee={dataCoffee}/> */}
         </div>
     )
 
