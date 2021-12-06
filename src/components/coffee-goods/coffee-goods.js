@@ -2,13 +2,15 @@ import CoffeeGoodsItem from "../cofee-goods-item/coffee-goods-item";
 
 import './coffee-goods.scss';
 
-const CoffeeGoods = ({dataCoffee}) => {
+const CoffeeGoods = ({dataCoffee, onCoffeeSelected, onToggleDescr}) => {
     const elements = dataCoffee.map(elem => {
         const {id, ...elemProps} = elem;
         return (
             <CoffeeGoodsItem
+                onCoffeeSelected={() => onCoffeeSelected(id)}
                 key={id}
-                {...elemProps}/>
+                {...elemProps}
+                onToggleDescr={onToggleDescr}/>
         );
     });
 

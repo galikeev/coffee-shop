@@ -1,6 +1,5 @@
 import MainPage from '../pages/main-page';
 import SecondPage from '../pages/second-page';
-import CoffeePage from '../pages/coffee-page';
 import ThirdPage from '../pages/third-page';
 
 import './app.scss';
@@ -72,10 +71,9 @@ const App = () => {
 
     return (
         <div className="app">
-            <MainPage/>
-            {/* <SecondPage dataCoffee={dataCoffee}/>
-            <CoffeePage dataCoffee={dataCoffee}/>
-            <ThirdPage dataCoffee={dataCoffee}/> */}
+            {/* <MainPage/> */}
+            <SecondPage dataCoffee={dataCoffee}/>
+            {/* <ThirdPage dataCoffee={dataCoffee}/> */}
         </div>
     )
 

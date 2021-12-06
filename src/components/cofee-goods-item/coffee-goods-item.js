@@ -1,8 +1,8 @@
 import './coffee-goods-item.scss';
 
-const CoffeeGoodsItem = ({img, name, country, price, alt}) => {
+const CoffeeGoodsItem = ({img, name, country, price, alt, onCoffeeSelected, onToggleDescr}) => {
     return (
-        <div className="goods__block">
+        <div onClick={() => {onCoffeeSelected(); onToggleDescr()}} className="goods__block">
             <div className="goods__img">
                 <img src={img} alt={alt} />
             </div>

@@ -6,14 +6,14 @@ import './best-coffee.scss';
 const BestCoffeeList = () => {
 
     const coffeeData = [
-        {img: SolimoCoffee, name: 'Solimo Coffee Beans 2 kg', price: 10.73, alt: 'solimo coffee'},
-        {img: PrestoCoffee, name: 'Presto Coffee Beans 1 kg', price: 15.99, alt: 'presto coffee'},
-        {img: AromisticoCoffee, name: 'AROMISTICO Coffee 1 kg', price: 6.99, alt: 'aromistico coffee'},
+        {img: SolimoCoffee, name: 'Solimo Coffee Beans 2 kg', price: 10.73, alt: 'solimo coffee', id: 1},
+        {img: PrestoCoffee, name: 'Presto Coffee Beans 1 kg', price: 15.99, alt: 'presto coffee', id: 2},
+        {img: AromisticoCoffee, name: 'AROMISTICO Coffee 1 kg', price: 6.99, alt: 'aromistico coffee', id: 3},
     ]
 
-    const coffee = coffeeData.map(({img, name, price, alt}) => {
+    const coffee = coffeeData.map(({img, name, price, alt, id}) => {
         return (
-            <div className="best__block">
+            <div className="best__block" key={id}>
                 <img src={img} alt={alt} />
                 <h3 className="best__name">{name}</h3>
                 <div className="best__price">{price}$</div>

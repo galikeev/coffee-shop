@@ -4,6 +4,7 @@ import SecondHeader from '../second-header/second-header';
 import AppAboutProduct from '../app-about-product/app-about-product';
 import SearchFilter from '../search-filter/search-filter';
 import CoffeeGoods from '../coffee-goods/coffee-goods';
+import CoffeeItemLayout from '../coffee-item-layout/coffee-item-layout';
 import AppFooter from '../app-footer/app-footer';
 
 class SecondPage extends Component {
@@ -11,8 +12,22 @@ class SecondPage extends Component {
         super(props);
         this.state = {
             term: '',
-            filter: 'all'
+            filter: 'all',
+            coffeeSelected: 0,
+            isShow: false
         }
+    }
+
+    onCoffeeSelected = (id) => {
+        this.setState({
+            coffeeSelected: id
+        })
+    }
+
+    onToggleDescr = () => {
+        this.setState(() => ({
+            isShow: !this.state.isShow
+        }))
     }
 
     searchEmployees = (items, term) => {
@@ -51,16 +66,28 @@ class SecondPage extends Component {
         const {dataCoffee} = this.props;
         const visibleData = this.filterPost(this.searchEmployees(dataCoffee, term), filter);
 
-        return (
+        const content = (
             <>
-                <SecondHeader second/>
                 <AppAboutProduct bearns/>
                 <SearchFilter
                     onUpdateSearch={this.onUpdateSearch}
                     filter={filter}
                     onFilterSelect={this.onFilterSelect}/>
                 <CoffeeGoods
-                    dataCoffee={visibleData}/>
+                    dataCoffee={visibleData}
+                    onCoffeeSelected={this.onCoffeeSelected}
+                    onToggleDescr={this.onToggleDescr}/>
+            </>
+        )
+
+        return (
+            <>
+                <SecondHeader second/>
+                {!this.state.isShow && content}
+                {this.state.isShow && <CoffeeItemLayout
+                    dataCoffee={visibleData}
+                    coffeeId={this.state.coffeeSelected}
+                    onToggleDescr={this.onToggleDescr}/>}
                 <AppFooter/>
             </>
         );
