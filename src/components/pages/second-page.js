@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState } from 'react';
 
 import SecondHeader from '../second-header/second-header';
 import AppAboutProduct from '../app-about-product/app-about-product';
@@ -7,30 +7,22 @@ import CoffeeGoods from '../coffee-goods/coffee-goods';
 import CoffeeItemLayout from '../coffee-item-layout/coffee-item-layout';
 import AppFooter from '../app-footer/app-footer';
 
-class SecondPage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            term: '',
-            filter: 'all',
-            coffeeSelected: 0,
-            isShow: false
-        }
+const SecondPage = (props) => {
+
+    const [term, setTerm] = useState('');
+    const [filter, setFilter] = useState('all');
+    const [coffeeSelected, setCoffeeSelected] = useState(0);
+    const [isShow, setIsShow] = useState(false);
+
+    const onCoffeeSelected = (id) => {
+        setCoffeeSelected(id);
     }
 
-    onCoffeeSelected = (id) => {
-        this.setState({
-            coffeeSelected: id
-        })
+    const onToggleDescr = () => {
+        setIsShow(isShow => !isShow)
     }
 
-    onToggleDescr = () => {
-        this.setState(() => ({
-            isShow: !this.state.isShow
-        }))
-    }
-
-    searchEmployees = (items, term) => {
+    const searchEmployees = (items, term) => {
         if (term.length === 0) {
             return items;
         }
@@ -40,11 +32,11 @@ class SecondPage extends Component {
         })
     }
 
-    onUpdateSearch = (term) => {
-        this.setState({term: term});
+    const onUpdateSearch = (term) => {
+        setTerm(term);
     }
 
-    filterPost = (items, filter) => {
+    const filterPost = (items, filter) => {
         switch (filter) {
             case 'brazil':
                 return items.filter(item => item.country === 'Brazil');
@@ -57,41 +49,38 @@ class SecondPage extends Component {
         }
     }
 
-    onFilterSelect = (filter) => {
-        this.setState({filter: filter});
+    const onFilterSelect = (filter) => {
+        setFilter(filter);
     }
 
-    render() {
-        const {term, filter} = this.state;
-        const {dataCoffee} = this.props;
-        const visibleData = this.filterPost(this.searchEmployees(dataCoffee, term), filter);
+    const {dataCoffee} = props;
+    const visibleData = filterPost(searchEmployees(dataCoffee, term), filter);
 
-        const content = (
-            <>
-                <AppAboutProduct bearns/>
-                <SearchFilter
-                    onUpdateSearch={this.onUpdateSearch}
-                    filter={filter}
-                    onFilterSelect={this.onFilterSelect}/>
-                <CoffeeGoods
-                    dataCoffee={visibleData}
-                    onCoffeeSelected={this.onCoffeeSelected}
-                    onToggleDescr={this.onToggleDescr}/>
-            </>
-        )
+    const content = (
+        <>
+            <AppAboutProduct bearns/>
+            <SearchFilter
+                onUpdateSearch={onUpdateSearch}
+                filter={filter}
+                onFilterSelect={onFilterSelect}/>
+            <CoffeeGoods
+                dataCoffee={visibleData}
+                onCoffeeSelected={onCoffeeSelected}
+                onToggleDescr={onToggleDescr}/>
+        </>
+    )
 
-        return (
-            <>
-                <SecondHeader second/>
-                {!this.state.isShow && content}
-                {this.state.isShow && <CoffeeItemLayout
-                    dataCoffee={visibleData}
-                    coffeeId={this.state.coffeeSelected}
-                    onToggleDescr={this.onToggleDescr}/>}
-                <AppFooter/>
-            </>
-        );
-    }
+    return (
+        <>
+            <SecondHeader second/>
+            {!isShow && content}
+            {isShow && <CoffeeItemLayout
+                dataCoffee={visibleData}
+                coffeeId={coffeeSelected}
+                onToggleDescr={onToggleDescr}/>}
+            <AppFooter/>
+        </>
+    );
 }
 
 export default SecondPage;
