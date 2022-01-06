@@ -73,11 +73,11 @@ const SecondPage = (props) => {
     return (
         <>
             <SecondHeader second/>
-            {!isShow && content}
-            {isShow && <CoffeeItemLayout
-                dataCoffee={visibleData}
-                coffeeId={coffeeSelected}
-                onToggleDescr={onToggleDescr}/>}
+                {!isShow && content}
+                {isShow && <CoffeeItemLayout
+                    dataCoffee={visibleData}
+                    coffeeId={coffeeSelected}
+                    onToggleDescr={onToggleDescr}/>}
             <AppFooter/>
         </>
     );
