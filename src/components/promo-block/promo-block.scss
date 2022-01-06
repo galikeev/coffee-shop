@@ -32,10 +32,12 @@
     }
     &__button {
         display: block;
-        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
         font-size: 14px;
         color: #fff;
         margin: 18px auto 0 auto;
+        padding-top: 4px;
         width: 120px;
         height: 30px;
         border: 1px solid #FFFFFF;

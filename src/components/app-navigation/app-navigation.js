@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import {LogoWhite} from '../../assets/images';
 import {LogoBlack} from '../../assets/images';
 
@@ -13,16 +15,16 @@ const AppNavigation = (props) => {
         <nav className='navigation'>
             <ul className="navigation__menu" style={menuPosition}>
                 <li className="navigation__links">
-                    <a style={colorLink} href="3">
+                    <NavLink exact style={colorLink} to="/">
                         <img src={colorLogo} alt="logo" />
                         Coffee house
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="navigation__links">
-                    <a style={colorLink} href="1">Our coffee</a>
+                    <NavLink exact style={colorLink} to="our-coffee">Our coffee</NavLink>
                 </li>
                 <li className="navigation__links">
-                    <a style={colorLink} href="2">For your pleasure</a>
+                    <NavLink exact style={colorLink} to="for-your-pleasure">For your pleasure</NavLink>
                 </li>
             </ul>
         </nav>

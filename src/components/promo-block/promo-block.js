@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { PromoIcon } from '../../assets/images';
 import './promo-block.scss';
 
@@ -14,7 +16,7 @@ const AppPromo = () => {
             </div>
             <h2 className="promo__subtitle">We makes every day full of energy and taste</h2>
             <h2 className="promo__subtitle">Want to try our beans?</h2>
-            <button className="promo__button">More</button>
+            <Link to="our-coffee" className="promo__button">More</Link>
         </main>
     );
 };

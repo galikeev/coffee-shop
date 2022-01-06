@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+
 import MainPage from '../pages/main-page';
 import SecondPage from '../pages/second-page';
 import ThirdPage from '../pages/third-page';
@@ -70,11 +72,21 @@ const App = () => {
     ];
 
     return (
-        <div className="app">
-            {/* <MainPage/> */}
-            <SecondPage dataCoffee={dataCoffee}/>
-            {/* <ThirdPage dataCoffee={dataCoffee}/> */}
-        </div>
+        <Router>
+            <div className="app">
+                <Switch>
+                    <Route exact path="/">
+                        <MainPage/>
+                    </Route>
+                    <Route exact path="/our-coffee">
+                        <SecondPage dataCoffee={dataCoffee}/>
+                    </Route>
+                    <Route path="/for-your-pleasure">
+                        <ThirdPage dataCoffee={dataCoffee}/>
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
     )
 
 }
