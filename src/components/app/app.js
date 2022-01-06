@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import MainPage from '../pages/main-page';
 import SecondPage from '../pages/second-page';
@@ -75,20 +75,12 @@ const App = () => {
     return (
         <Router>
             <div className="app">
-                <Switch>
-                    <Route exact path="/">
-                        <MainPage/>
-                    </Route>
-                    <Route exact path="/our-coffee">
-                        <SecondPage dataCoffee={dataCoffee}/>
-                    </Route>
-                    <Route path="/for-your-pleasure">
-                        <ThirdPage dataCoffee={dataCoffee}/>
-                    </Route>
-                    <Route path="*">
-                        <Page404/>
-                    </Route>
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<MainPage/>}/>
+                    <Route path="/our-coffee" element={<SecondPage dataCoffee={dataCoffee}/>}/>
+                    <Route path="/for-your-pleasure" element={<ThirdPage dataCoffee={dataCoffee}/>}/>
+                    <Route path="*" element={<Page404/>}/>
+                </Routes>
             </div>
         </Router>
     )

@@ -15,16 +15,16 @@ const AppNavigation = (props) => {
         <nav className='navigation'>
             <ul className="navigation__menu" style={menuPosition}>
                 <li className="navigation__links">
-                    <NavLink exact style={colorLink} to="/">
+                    <NavLink end style={colorLink} to="/">
                         <img src={colorLogo} alt="logo" />
                         Coffee house
                     </NavLink>
                 </li>
                 <li className="navigation__links">
-                    <NavLink exact style={colorLink} to="our-coffee">Our coffee</NavLink>
+                    <NavLink end style={colorLink} to="/our-coffee">Our coffee</NavLink>
                 </li>
                 <li className="navigation__links">
-                    <NavLink exact style={colorLink} to="for-your-pleasure">For your pleasure</NavLink>
+                    <NavLink end style={colorLink} to="/for-your-pleasure">For your pleasure</NavLink>
                 </li>
             </ul>
         </nav>
