@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/rea
 import MainPage from '../pages/main-page';
 import SecondPage from '../pages/second-page';
 import ThirdPage from '../pages/third-page';
+import Page404 from "../pages/404";
 
 import './app.scss';
 import {AromisticoCoffee} from '../../assets/images';
@@ -83,6 +84,9 @@ const App = () => {
                     </Route>
                     <Route path="/for-your-pleasure">
                         <ThirdPage dataCoffee={dataCoffee}/>
+                    </Route>
+                    <Route path="*">
+                        <Page404/>
                     </Route>
                 </Switch>
             </div>
