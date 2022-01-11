@@ -5,7 +5,8 @@ https://my-coffee-shop-app.herokuapp.com/
 ## Technologies
 
 - JS
-- React
+- React Hooks
+- React Router
 - SASS
 
 ### Development
