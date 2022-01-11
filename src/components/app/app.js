@@ -1,13 +1,18 @@
+import { lazy, Suspense } from "react";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import MainPage from '../pages/main-page';
-import SecondPage from '../pages/second-page';
-import ThirdPage from '../pages/third-page';
-import Page404 from "../pages/404";
+import Spinner from "../spinner/spinner";
 
 import './app.scss';
 import {AromisticoCoffee} from '../../assets/images';
 import { BigCoffeeImg } from '../../assets/images';
+
+const SecondPage = lazy(() => import('../pages/second-page'));
+const ThirdPage = lazy(() => import('../pages/third-page'));
+const Page404 = lazy(() => import('../pages/404'));
+
 
 const App = () => {
 
@@ -75,12 +80,14 @@ const App = () => {
     return (
         <Router>
             <div className="app">
-                <Routes>
-                    <Route path="/" element={<MainPage/>}/>
-                    <Route path="/our-coffee" element={<SecondPage dataCoffee={dataCoffee}/>}/>
-                    <Route path="/for-your-pleasure" element={<ThirdPage dataCoffee={dataCoffee}/>}/>
-                    <Route path="*" element={<Page404/>}/>
-                </Routes>
+                <Suspense fallback={<Spinner/>}>
+                    <Routes>
+                        <Route path="/" element={<MainPage/>}/>
+                        <Route path="/our-coffee" element={<SecondPage dataCoffee={dataCoffee}/>}/>
+                        <Route path="/for-your-pleasure" element={<ThirdPage dataCoffee={dataCoffee}/>}/>
+                        <Route path="*" element={<Page404/>}/>
+                    </Routes>
+                </Suspense>
             </div>
         </Router>
     )
