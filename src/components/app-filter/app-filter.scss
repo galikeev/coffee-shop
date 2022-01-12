@@ -3,8 +3,10 @@
     align-items: center;
     &__title {
         margin-right: 35px;
-        font-size: 14px;
-        line-height: 20px;
+    }
+    &__wrapper {
+        display: flex;
+        margin: 0 auto;
     }
     &__btn {
         width: 75px;
@@ -18,14 +20,32 @@
             background: #a5a5a5;
             transition: 0.3s all;
         }
-        &:nth-child(2) {
+        &:nth-child(1) {
             border-radius: 4px 0px 0px 4px;
         }
-        &:nth-child(5) {
+        &:nth-child(4) {
             border-radius: 0px 4px 4px 0px;
+            margin-right: 0px;
         }
         &_gr {
             background: #a5a5a5;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .filter {
+        &__title {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .filter {
+        flex-direction: column;
+        &__title {
+            margin: 5px 0 10px 0;
         }
     }
 }

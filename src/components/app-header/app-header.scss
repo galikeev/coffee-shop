@@ -4,4 +4,14 @@
         padding-left: 148px;
         padding-bottom: 111px;
     }
-}   
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__wrapper {
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-bottom: 60px;
+        }
+    }
+}

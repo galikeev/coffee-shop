@@ -2,6 +2,7 @@ import {SolimoCoffee} from '../../assets/images';
 import {PrestoCoffee} from '../../assets/images';
 import {AromisticoCoffee} from '../../assets/images';
 import './best-coffee.scss';
+import '../../styles/titles.scss';
 
 const BestCoffeeList = () => {
 
@@ -15,15 +16,15 @@ const BestCoffeeList = () => {
         return (
             <div className="best__block" key={id}>
                 <img src={img} alt={alt} />
-                <h3 className="best__name">{name}</h3>
-                <div className="best__price">{price}$</div>
+                <h3 className="best__name fz_14">{name}</h3>
+                <div className="best__price fz_14">{price}$</div>
             </div>
         );
     });
 
     return (
         <section className="best">
-            <h2 className="best__title">Our best</h2>
+            <h2 className="best__title fz_24">Our best</h2>
             <div className="best__wrapper">
                 {coffee}
             </div>

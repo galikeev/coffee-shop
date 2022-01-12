@@ -4,6 +4,7 @@ import { CupCoffeePhoto } from '../../assets/images';
 import { GirlCoffeePhoto } from '../../assets/images';
 
 import './app-about-product.scss';
+import '../../styles/titles.scss';
 
 const AppAboutProduct = (props) => {
 
@@ -17,9 +18,9 @@ const AppAboutProduct = (props) => {
                     <img src={img} alt="coffee" />
                 </div>
                 <div className="product__block">
-                    <h3 className="product__title">{title}</h3>
+                    <h3 className="product__title fz_24">{title}</h3>
                     <AppCoffeeLogo/>
-                    <p className="product__descr">
+                    <p className="product__descr fz_14">
                         Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                         <br /> <br />
                         Afraid at highly months do things on at. Situation recommend objection do intention

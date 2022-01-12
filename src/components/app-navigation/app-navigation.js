@@ -8,11 +8,12 @@ import './app-navigation.scss';
 const AppNavigation = (props) => {
     
     const colorLink = props.footer ? "navigation__links_black" : "navigation__links_white";
+    const hideNav = props.footer ? "navigation navigation_close" : "navigation"
     const colorLogo = props.footer ? LogoBlack : LogoWhite;
     const menuPosition = props.footer ? {justifyContent: 'center'} : {justifyContent: 'flex-start'}
 
     return (
-        <nav className='navigation'>
+        <nav className={hideNav}>
             <ul className="navigation__menu" style={menuPosition}>
                 <NavLink
                     end

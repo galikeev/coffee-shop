@@ -30,3 +30,22 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .navigation {
+        &__links {
+            margin-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .navigation {
+        &_close {
+            display: none;
+        }
+        &__menu {
+            justify-content: center;
+        }
+    }
+}

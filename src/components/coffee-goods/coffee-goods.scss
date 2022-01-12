@@ -9,3 +9,17 @@
     column-gap: 60px;
     margin-bottom: 30px;
 }
+
+@media (max-width: 767px) {
+    .goods {
+        row-gap: 49px;
+        column-gap: 40px;
+        grid-template-columns: repeat(2, 220px);
+    }
+}
+
+@media (max-width: 575px) {
+    .goods {
+        grid-template-columns: repeat(1, 220px);
+    }
+}

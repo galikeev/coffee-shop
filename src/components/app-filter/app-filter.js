@@ -1,4 +1,5 @@
 import './app-filter.scss';
+import '../../styles/titles.scss';
 
 const AppFilter = (props) => {
     const buttonsData = [
@@ -10,7 +11,7 @@ const AppFilter = (props) => {
 
     const buttons = buttonsData.map(({name, label}) => {
         const active = props.filter === name;
-        const clazz = active ? 'filter__btn filter__btn_gr' : 'filter__btn';
+        const clazz = active ? 'filter__btn filter__btn_gr fz_13' : 'filter__btn fz_13';
         return (
             <button
                 type="button"
@@ -24,8 +25,10 @@ const AppFilter = (props) => {
 
     return (
         <div className="filter">
-            <h4 className="filter__title">Or filter</h4>
-            {buttons}
+            <h4 className="filter__title fz_14">Or filter</h4>
+            <div className="filter__wrapper">
+                {buttons}
+            </div>
         </div>
     );
 };

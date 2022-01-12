@@ -27,3 +27,12 @@
         text-align: right;
     }
 }
+
+@media (max-width: 575px) {
+    .goods {
+        grid-template-columns: repeat(1, 220px);
+        &_center {
+            text-align: center;
+        }
+    }
+}

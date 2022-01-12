@@ -1,13 +1,14 @@
 import AppCoffeeLogo from '../app-coffee-logo/app-coffee-logo';
 
 import './about-coffee.scss';
+import '../../styles/titles.scss';
 
 const AboutCoffee = () => {
     return (
         <section className="about">
-            <h2 className="about__title">About Us</h2>
+            <h2 className="about__title fz_24">About Us</h2>
             <AppCoffeeLogo/>
-            <p className="about__descr">
+            <p className="about__descr fz_14">
                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                 Afraid at highly months do things on at. Situation recommend objection do intention
                 so questions. As greatly removed calling pleased improve an. Last ask him cold feel

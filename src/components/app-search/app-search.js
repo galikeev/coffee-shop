@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import './app-search.scss';
+import '../../styles/titles.scss';
 
 const SearchPanel = (props) => {
 
@@ -14,7 +15,7 @@ const SearchPanel = (props) => {
 
     return (
         <div className="search">
-            <h4 className="search__title">Lookiing for</h4>
+            <h4 className="search__title fz_14">Lookiing for</h4>
             <input 
                 type="text"
                 className="search__input"
