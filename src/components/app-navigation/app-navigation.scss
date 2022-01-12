@@ -9,6 +9,12 @@
     }
     &__links {
         margin-right: 40px;
+        &_black {
+            color: #000;
+        }
+        &_white {
+            color: #fff;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -16,7 +22,11 @@
             text-decoration: none;
             display: flex;
             align-items: flex-end;
-            color: #fff;
+            &:hover {
+                opacity: 0.7;
+                transform: scale(1.05);
+                transition: 0.3s all;
+            }
         }
     }
 }
