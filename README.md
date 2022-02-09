@@ -1,6 +1,10 @@
-# My pet-project SPA Coffee Shop
+# SPA Coffee Shop on React
 
 https://my-coffee-shop-app.herokuapp.com/
+
+## Screenshot
+
+[![2022-02-09-10-46-28.png](https://i.postimg.cc/KvV5qzWT/2022-02-09-10-46-28.png)](https://postimg.cc/N56TLgBG)
 
 ## Technologies
 
